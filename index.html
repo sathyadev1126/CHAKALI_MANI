@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chakali Mani | Portfolio</title>
+
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+html {
+scroll-behavior:smooth;
+}
+</style>
+
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">Chakali Mani</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<header id="home" class="hero">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>Chakali Mani</h1>
+
+<p>Python Developer | Django | Web Development</p>
+
+<a class="btn" href="resume.pdf">Download Resume</a>
+
+</div>
+
+
+<div class="hero-img">
+
+<img src="assets/mani.png" alt="Chakali Mani">
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+
+I am a B.Tech Electronics and Communication Engineering student
+from Santhiram Engineering College.
+
+I am passionate about software development and building web
+applications using Python and Django.
+
+</p>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skill-box">
+
+<span>Python</span>
+<span>Django</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>MySQL</span>
+<span>GitHub</span>
+<span>VS Code</span>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project-card">
+
+<h3>Placement Preparation Portal</h3>
+
+<p>
+
+Django-based web portal that helps students prepare for campus
+placements with aptitude questions and learning resources.
+
+</p>
+
+<p><b>Tech:</b> Python, Django, HTML, CSS, MySQL</p>
+
+</div>
+
+
+
+<div class="project-card">
+
+<h3>NPTEL Course Project Website</h3>
+
+<p>
+
+Website created to organize assignments and learning resources
+from NPTEL Artificial Intelligence and Machine Learning course.
+
+</p>
+
+<p><b>Tech:</b> HTML, CSS, JavaScript, GitHub Pages</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="cert-container">
+
+<div class="cert-card">
+<img src=" assets/cert1.png" alt="NPTEL Certificate">
+<p>Web Development Program – Launched Global</p>
+</div>
+
+<div class="cert-card">
+<img src="assets/cert2.png" alt="AICTE Internship Certificate">
+<p>AICTE Python Full Stack Developer Internship</p>
+</div>
+
+<div class="cert-card">
+<img src="assets/cert3.png" alt="Embedded Internship Certificate">
+<p>Microchip Embedded Systems Internship</p>
+</div>
+
+<div class="cert-card">
+<img src="assets/cert4.jpeg" alt="Web Development Certificate">
+<p>NPTEL – Fundamentals of Artificial Intelligence & Machine Learning</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: manitejmani55@gmail.com</p>
+
+<p>Phone: +91 8309856096</p>
+
+<p>
+
+GitHub:
+<a href="https://github.com/sathyadev1126">
+github.com/sathyadev1126
+</a>
+
+</p>
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Chakali Mani</p>
+
+</footer>
+
+
+
+<!-- SCROLL ANIMATION -->
+
+<script>
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+},{ threshold:0.2 });
+
+sections.forEach(section=>{
+observer.observe(section);
+});
+
+
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+let current = "";
+
+document.querySelectorAll("section").forEach(section => {
+
+const sectionTop = section.offsetTop;
+
+if(pageYOffset >= sectionTop - 120){
+current = section.getAttribute("id");
+}
+
+});
+
+navLinks.forEach(link => {
+
+link.classList.remove("active");
+
+if(link.getAttribute("href") == "#" + current){
+link.classList.add("active");
+}
+
+});
+
+});
+
+</script>
+
+
+</body>
+
+</html>
