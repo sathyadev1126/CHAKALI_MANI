@@ -69,12 +69,18 @@ max-width:500px;
 
 .btn{
 display:inline-block;
-background:white;
-color:#2563eb;
-padding:10px 20px;
-border-radius:5px;
+background:#2563eb;
+color:white;
+padding:8px 14px;
+border-radius:6px;
 text-decoration:none;
-margin-top:10px;
+margin:5px 5px 0 0;
+font-size:14px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
 }
 
 .hero-img img{
