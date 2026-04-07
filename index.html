@@ -10,6 +10,9 @@
 
 <link rel="stylesheet" href="assets/style.css">
 
+<!-- ✅ ADDED: preload for faster image -->
+<link rel="preload" as="image" href="assets/mani.png">
+
 <style>
 html {
 scroll-behavior:smooth;
@@ -78,13 +81,13 @@ scroll-behavior:smooth;
 <h2>About Me</h2>
 
 <p>
-
 I am a B.Tech Electronics and Communication Engineering student
 from Santhiram Engineering College.
+<br><br>
 
-I am passionate about software development and building web
-applications using Python and Django.
-
+I am highly interested in Python Development and enjoy building web
+applications using Python and Django. I am continuously improving my skills
+to become a professional software developer.
 </p>
 
 </section>
@@ -164,6 +167,7 @@ Open NPTEL Practice Portal
     View Output
 </a>
 </div>
+
 <div class="project-card">
 
 <h3>To-Do List GUI Application</h3>
@@ -172,12 +176,13 @@ Open NPTEL Practice Portal
 A desktop-based To-Do List application built using Python Tkinter and SQLite.
 It allows users to add, delete, and manage daily tasks with persistent storage.
 </p>
-
+<a href="https://github.com/sathyadev1126/todo_gui_app/" target="_blank">View Project</a>
 <p><b>Tech:</b> Python, Tkinter, SQLite</p>
 
 <a href="assets/todo.png" target="_blank" class="btn">Main Screen</a>
 
 </div>
+
 <div class="project-card">
     <h3>AI-Powered WBAN for Remote Patient Monitoring</h3>
     <p>
@@ -192,6 +197,7 @@ It allows users to add, delete, and manage daily tasks with persistent storage.
     </ul>
 <p><strong>Tech:</strong> Python, AI, WBAN, Edge Computing</p>  
 </div>
+
 </section>
 
 
@@ -225,7 +231,6 @@ It allows users to add, delete, and manage daily tasks with persistent storage.
 </div>
 
 </div>
-
 
 </section>
 
@@ -315,6 +320,26 @@ link.classList.add("active");
 
 </script>
 
+<!-- ✅ ADDED: Lazy loading -->
+<script>
+document.querySelectorAll("img").forEach(img => {
+    img.setAttribute("loading", "lazy");
+});
+</script>
+
+<!-- ✅ ADDED: Smooth scroll optimization -->
+<script>
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+</script>
 
 </body>
 
